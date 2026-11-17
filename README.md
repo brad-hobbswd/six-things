@@ -1,2 +1,2 @@
-# six-things-
+# six-things
 The Seven Things
