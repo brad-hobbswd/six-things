@@ -64,9 +64,13 @@ body[data-page^="chapter-"] .site-header{display:none}
 
 /* Use the compact navigation header on chapter and closing pages. */
 body[data-page^="chapter-"] .site-header,
-body[data-page="closing-thoughts"] .site-header{display:none}
+body[data-page="introduction"] .site-header,
+body[data-page="closing-thoughts"] .site-header,
+body[data-page="prayer"] .site-header{display:none}
 body[data-page^="chapter-"] .chapter-header,
-body[data-page="closing-thoughts"] .chapter-header{display:block}
+body[data-page="introduction"] .chapter-header,
+body[data-page="closing-thoughts"] .chapter-header,
+body[data-page="prayer"] .chapter-header{display:block}
 
 
 /* Chapter overview: clear, responsive reading cards. */
