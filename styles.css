@@ -60,3 +60,10 @@
 
 /* Chapter reading pages use a simpler header without the decorative banner. */
 body[data-page^="chapter-"] .site-header{display:none}
+
+
+/* Use the compact navigation header on chapter and closing pages. */
+body[data-page^="chapter-"] .site-header,
+body[data-page="closing-thoughts"] .site-header{display:none}
+body[data-page^="chapter-"] .chapter-header,
+body[data-page="closing-thoughts"] .chapter-header{display:block}
