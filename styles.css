@@ -66,11 +66,21 @@ body[data-page^="chapter-"] .site-header{display:none}
 body[data-page^="chapter-"] .site-header,
 body[data-page="introduction"] .site-header,
 body[data-page="closing-thoughts"] .site-header,
-body[data-page="prayer"] .site-header{display:none}
+body[data-page="prayer"] .site-header,
+body[data-page="author"] .site-header,
+body[data-page="about-book"] .site-header,
+body[data-page="contact"] .site-header,
+body[data-page="seven-things"] .site-header,
+body[data-page="chapters"] .site-header{display:none}
 body[data-page^="chapter-"] .chapter-header,
 body[data-page="introduction"] .chapter-header,
 body[data-page="closing-thoughts"] .chapter-header,
-body[data-page="prayer"] .chapter-header{display:block}
+body[data-page="prayer"] .chapter-header,
+body[data-page="author"] .chapter-header,
+body[data-page="about-book"] .chapter-header,
+body[data-page="contact"] .chapter-header,
+body[data-page="seven-things"] .chapter-header,
+body[data-page="chapters"] .chapter-header{display:block}
 
 
 /* Chapter overview: clear, responsive reading cards. */
