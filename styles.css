@@ -26,3 +26,33 @@
 .grid-seven>.card:last-child{grid-column:2}
 @media(max-width:900px){.grid-seven>.card:last-child{grid-column:1/-1;justify-self:center;width:min(100%,calc((100% - 1.25rem)/2))}}
 @media(max-width:680px){.grid-seven>.card:last-child{grid-column:auto;width:100%}}
+
+/* Scripture presentation: quieter blocks with clearly identified verse numbers. */
+.section-light .scripture{
+  margin:1.5rem 0;
+  padding:1.15rem 1.35rem;
+  border-left:3px solid var(--gold);
+  background:rgba(255,250,240,.72);
+  color:#293746;
+  font:normal 1.02rem/1.8 var(--serif);
+  box-shadow:0 5px 18px rgba(67,49,21,.045);
+}
+.scripture strong{
+  display:block;
+  margin-bottom:.65rem;
+  color:#805719;
+  font:700 .78rem/1.4 var(--sans);
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+.verse-number{
+  display:inline-block;
+  min-width:1.45rem;
+  margin-right:.35rem;
+  color:#91651f;
+  font:700 .72rem/1.4 var(--sans);
+  vertical-align:baseline;
+}
+@media(max-width:680px){
+  .section-light .scripture{padding:1rem;font-size:.98rem;line-height:1.75}
+}
