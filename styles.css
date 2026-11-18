@@ -21,3 +21,8 @@
 
 @media(max-width:900px){.footer-inner{grid-template-columns:1fr;gap:2.25rem}.footer-brand{max-width:620px}.footer-navigation{grid-template-columns:minmax(0,2fr) minmax(150px,.8fr);gap:2rem}}
 @media(max-width:600px){.site-footer{padding:2.6rem 1.15rem 1.25rem}.footer-navigation{grid-template-columns:1fr;gap:2rem}.footer-links{grid-template-columns:1fr;gap:.75rem}.footer-legal .footer-links{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-bottom{margin-top:2rem;display:grid;gap:.55rem}}
+
+/* Center the seventh item when the three-column grid has one card left. */
+.grid-seven>.card:last-child{grid-column:2}
+@media(max-width:900px){.grid-seven>.card:last-child{grid-column:1/-1;justify-self:center;width:min(100%,calc((100% - 1.25rem)/2))}}
+@media(max-width:680px){.grid-seven>.card:last-child{grid-column:auto;width:100%}}
