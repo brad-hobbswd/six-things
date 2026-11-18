@@ -145,3 +145,84 @@ body[data-page="closing-thoughts"] .chapter-header{display:block}
 @media(prefers-reduced-motion:reduce){
   .chapter-list-cards li{transition:none}
 }
+
+
+/* Scripture index and historical references: refined reference tables and source lists. */
+.reference-table{
+  width:100%;
+  margin:1.35rem 0 2.5rem;
+  border-collapse:separate;
+  border-spacing:0 .55rem;
+  color:#263746;
+  font-size:.97rem;
+}
+.reference-table thead th{
+  padding:.8rem 1rem;
+  background:#102d43;
+  color:#f4dfb4;
+  border:0;
+  text-align:left;
+  font:700 .76rem/1.4 var(--sans);
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.reference-table thead th:first-child{border-radius:6px 0 0 6px;width:34%}
+.reference-table thead th:last-child{border-radius:0 6px 6px 0}
+.reference-table tbody tr{background:#fffaf0}
+.reference-table tbody td{
+  padding:.9rem 1rem;
+  border-top:1px solid rgba(137,99,37,.18);
+  border-bottom:1px solid rgba(137,99,37,.18);
+  vertical-align:middle;
+  line-height:1.55;
+}
+.reference-table tbody td:first-child{
+  border-left:3px solid var(--gold);
+  border-radius:5px 0 0 5px;
+  color:#805719;
+  white-space:nowrap;
+}
+.reference-table tbody td:last-child{
+  border-right:1px solid rgba(137,99,37,.18);
+  border-radius:0 5px 5px 0;
+}
+.reference-table tbody tr:hover td{background:#f5ead4}
+.reference-table tbody td strong{font-family:var(--serif);font-size:1.02rem}
+.prose>ul:not(.chapter-list){
+  margin:1rem 0 2rem;
+  padding:0;
+  list-style:none;
+}
+.prose>ul:not(.chapter-list)>li{
+  margin:.75rem 0;
+  padding:1rem 1.15rem;
+  border:1px solid rgba(137,99,37,.2);
+  border-left:3px solid var(--gold);
+  border-radius:5px;
+  background:rgba(255,250,240,.78);
+  line-height:1.7;
+}
+.prose>ul:not(.chapter-list)>li a{
+  display:inline-block;
+  margin:.25rem .1rem;
+  font-weight:650;
+  text-decoration-thickness:1px;
+}
+.prose .legal-note{
+  margin:1.8rem 0 2.5rem;
+  padding:1.15rem 1.35rem;
+  border-left:4px solid var(--gold);
+  border-radius:4px;
+  background:#fffaf0;
+  color:#384957;
+  line-height:1.7;
+}
+@media(max-width:680px){
+  .reference-table{font-size:.9rem;border-spacing:0 .4rem}
+  .reference-table thead th{padding:.7rem .65rem;font-size:.68rem}
+  .reference-table thead th:first-child{width:39%}
+  .reference-table tbody td{padding:.75rem .65rem}
+  .reference-table tbody td:first-child{white-space:normal}
+  .reference-table tbody td strong{font-size:.95rem}
+  .prose>ul:not(.chapter-list)>li{padding:.9rem}
+}
