@@ -67,3 +67,81 @@ body[data-page^="chapter-"] .site-header,
 body[data-page="closing-thoughts"] .site-header{display:none}
 body[data-page^="chapter-"] .chapter-header,
 body[data-page="closing-thoughts"] .chapter-header{display:block}
+
+
+/* Chapter overview: clear, responsive reading cards. */
+.chapter-list-cards{
+  counter-reset:chapter;
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin:2rem 0 2.5rem;
+  padding:0;
+  list-style:none;
+}
+.chapter-list-cards li{
+  counter-increment:chapter;
+  position:relative;
+  display:flex;
+  align-items:stretch;
+  min-width:0;
+  min-height:116px;
+  padding:0;
+  border:1px solid rgba(137,99,37,.25);
+  border-left:4px solid var(--gold);
+  border-radius:7px;
+  background:linear-gradient(145deg,#fffaf0,#f4ead6);
+  box-shadow:0 7px 20px rgba(67,49,21,.07);
+  overflow:hidden;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;
+}
+.chapter-list-cards li:before{
+  content:counter(chapter,decimal-leading-zero);
+  position:static;
+  flex:0 0 66px;
+  display:grid;
+  place-items:center;
+  align-self:stretch;
+  margin:0;
+  border-right:1px solid rgba(137,99,37,.18);
+  background:rgba(201,154,66,.10);
+  color:#91651f;
+  font:600 1.45rem/1 var(--serif);
+}
+.chapter-list-cards li a{
+  display:flex;
+  align-items:center;
+  width:100%;
+  padding:1.25rem 1.35rem;
+  color:#17334a;
+  text-decoration:none!important;
+  font-family:var(--serif);
+  font-size:1.08rem;
+  line-height:1.48;
+  transition:color .2s ease;
+}
+.chapter-list-cards li a strong{font-weight:600}
+.chapter-list-cards li:hover{
+  transform:translateY(-3px);
+  border-color:rgba(137,99,37,.58);
+  box-shadow:0 13px 27px rgba(67,49,21,.13);
+}
+.chapter-list-cards li a:hover,
+.chapter-list-cards li a:focus-visible{color:#805719}
+.chapter-list-cards li a:focus-visible{
+  outline:3px solid rgba(145,101,31,.45);
+  outline-offset:-5px;
+}
+.chapter-list-cards li:focus-within{
+  border-color:#91651f;
+  box-shadow:0 0 0 3px rgba(145,101,31,.16);
+}
+@media(max-width:760px){
+  .chapter-list-cards{grid-template-columns:1fr;gap:.8rem}
+  .chapter-list-cards li{min-height:92px}
+  .chapter-list-cards li:before{flex-basis:58px;font-size:1.25rem}
+  .chapter-list-cards li a{padding:1rem 1.1rem;font-size:1.02rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .chapter-list-cards li{transition:none}
+}
