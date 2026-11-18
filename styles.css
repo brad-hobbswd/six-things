@@ -56,3 +56,7 @@
 @media(max-width:680px){
   .section-light .scripture{padding:1rem;font-size:.98rem;line-height:1.75}
 }
+
+
+/* Chapter reading pages use a simpler header without the decorative banner. */
+body[data-page^="chapter-"] .site-header{display:none}
